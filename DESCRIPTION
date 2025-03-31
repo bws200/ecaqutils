@@ -22,3 +22,5 @@ Imports:
   stringr,
   readr,
   tidyr
+URL: https://github.com/bws200/ecaqutils
+BugReports: https://github.com/bws200/ecaqutils/issues
