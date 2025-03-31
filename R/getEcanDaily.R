@@ -11,6 +11,8 @@
 #' getEcandaily(from_date = "01/01/2025", to_date = "31/01/2025")
 getEcanDaily <- function(from_date, to_date) {
 
+  # This method uses a stored procedure (`pAir_MonDailyAllParams`) to retrieve **daily averages** from the [ecan website](https://data.ecan.govt.nz/Catalogue/Method?MethodId=98#tab-data). The averages are calculated by a stored procedure `dbo.XXsomethingXX` and stored within the Envista database. The relevant table in the Envista database is `dbo.Alldaily.`
+
   # Convert type and add a day to account for days between
   from_date <- lubridate::dmy(from_date)
   to_date <- lubridate::dmy(to_date) + 1
@@ -19,9 +21,6 @@ getEcanDaily <- function(from_date, to_date) {
   to_date_char <- to_date |>
     format("%d/%m/%Y") |>
     as.character()
-
-  # Check time length
-  print("Time between start and end dates is...")
 
   # Create time interval
   time_interval <- lubridate::interval(
