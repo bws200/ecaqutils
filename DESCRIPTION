@@ -1,0 +1,24 @@
+Package: ecaqutils
+Type: Package
+Title: Utility functions to help with getting data from the Ecan website
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Ben", "Scott",
+      email = "ben.scott@ecan.govt.nz",
+      role = c("aut", "cre")
+    )
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+  dplyr,
+  lubridate,
+  httr,
+  janitor,
+  stringr,
+  readr,
+  tidyr
